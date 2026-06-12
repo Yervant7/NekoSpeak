@@ -42,15 +42,6 @@ android {
         }
     }
 
-    signingConfigs {
-        create("release") {
-            storeFile = file("release.keystore")
-            storePassword = "nekospeak123"
-            keyAlias = "nekospeak"
-            keyPassword = "nekospeak123"
-        }
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -58,7 +49,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
         }
     }
     
